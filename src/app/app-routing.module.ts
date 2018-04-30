@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { TwitterComponent } from './twitter/twitter.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'twitter', component: TwitterComponent },
 ];
 
 @NgModule({
@@ -13,5 +15,5 @@ const appRoutes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  static components = [HomeComponent];
+  static components = [HomeComponent, TwitterComponent];
 }
